@@ -25,4 +25,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvDuration" />
 
+    <Button
+        android:id = "@+id/btnPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"/>
+
 </LinearLayout>

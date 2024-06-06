@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
 
+import java.io.Console;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     String selectedMP3;
     ListViewMP3Adapter adapter;
 
-    String mp3path = Environment.getExternalStorageDirectory().getPath() + "/";
+    String mp3path =  Environment.getExternalStorageDirectory().getPath() + "/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.READ_MEDIA_AUDIO}, MODE_PRIVATE);
 
+        Log.i("File Path", mp3path);
         mp3files = new ArrayList<>();
         File[] files = new File(mp3path).listFiles();
         String filename, ext;
